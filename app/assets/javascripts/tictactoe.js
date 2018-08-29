@@ -72,7 +72,6 @@ function attachListeners(){
 }
 
 function previousGames(){
-<<<<<<< HEAD
   $("#games").empty();
   $.get('/games', function(previousGame){
     for(i=0; i < previousGame.data.length; i++){
@@ -80,13 +79,6 @@ function previousGames(){
     };
     loadGame();
   }, "json");
-=======
-  $.get('/games', function(previousGame){
-    for(i=0; i < previousGame.data.length-1; i++){
-      $("#games").append('<button name="BUTTON" class="game_button" data-id="' + previousGame.data[i].id + '" data-state="' + previousGame.data[i].state + '">Game #' + (i+1) + '</button>')
-    };
-  };
->>>>>>> d4a045b8b74bf237ca063e6ad3cdeae146658476
 }
 
 function loadGame() {
